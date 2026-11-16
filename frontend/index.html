@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GimnasIA: chatbot de ejercicios con Prolog y Gemini.">
+  <title>GimnasIA</title>
+  <link rel="stylesheet" href="/static/estilos.css?v=2">
+  <script src="/static/app.js?v=2" defer></script>
+</head>
+<body>
+  <main class="pagina">
+    <header class="encabezado">
+      <h1>GimnasIA</h1>
+      <p>Chatbot de ejercicios de gimnasio</p>
+    </header>
+
+    <section class="controles" aria-label="Configuración del chatbot">
+      <label for="modo">Selecciona el chatbot</label>
+      <select id="modo">
+        <option value="comparar">Comparar Prolog + LLM (Gemini)</option>
+        <option value="prolog">Solo Prolog</option>
+        <option value="llm">Solo LLM (Gemini)</option>
+      </select>
+      <div class="estado" aria-live="polite">
+        <span><span id="dot-prolog" class="dot"></span>Prolog: <strong id="state-prolog">Comprobando...</strong></span>
+        <span><span id="dot-llm" class="dot"></span>Gemini: <strong id="state-llm">Comprobando...</strong></span>
+        <button type="button" id="refresh" class="boton-secundario">Actualizar estado</button>
+      </div>
+    </section>
+
+    <section class="sugerencias" aria-label="Preguntas sugeridas">
+      <h2>Preguntas sugeridas</h2>
+      <p class="ayuda">Puedes seleccionar una de estas 20 preguntas o escribir una propia.</p>
+      <div id="ejemplos" class="lista-preguntas"></div>
+    </section>
+
+    <section class="conversacion" aria-label="Conversación">
+      <div class="titulo-chat">
+        <h2>Chat</h2>
+        <button type="button" id="clear" class="boton-secundario">Limpiar conversación</button>
+      </div>
+      <div id="chat" class="chat" role="log" aria-live="polite" aria-relevant="additions">
+        <p class="welcome">Las respuestas de los chatbots aparecerán aquí.</p>
+      </div>
+      <form id="form" class="formulario">
+        <label for="pregunta" class="sr-only">Escribe tu pregunta</label>
+        <input id="pregunta" maxlength="500" autocomplete="off" required placeholder="Escribe tu pregunta...">
+        <button id="send" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

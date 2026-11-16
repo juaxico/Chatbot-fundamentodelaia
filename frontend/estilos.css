@@ -1,0 +1,43 @@
+/* Diseño sencillo de GimnasIA, sin bibliotecas de estilos. */
+:root { font-family: Arial, Helvetica, sans-serif; color: #252525; background: #f7f7f7; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, select, input { font: inherit; }
+.pagina { max-width: 860px; margin: 28px auto; padding: 0 18px 28px; }
+.encabezado { margin-bottom: 20px; }
+h1 { margin: 0 0 5px; font-size: 30px; font-weight: 700; }
+.encabezado p, .ayuda { margin: 0; font-size: 14px; color: #666; }
+h2 { margin: 0 0 10px; font-size: 18px; }
+.controles, .sugerencias, .conversacion { background: #fff; border: 1px solid #d6d6d6; padding: 17px; margin-bottom: 16px; border-radius: 5px; }
+.controles > label { display: block; font-weight: 600; margin-bottom: 8px; }
+select { padding: 9px 10px; width: min(100%, 360px); border: 1px solid #b8b8b8; border-radius: 4px; background: #fff; }
+.estado { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; margin-top: 14px; color: #444; font-size: 13px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; background: #aaa; }
+.dot.online { background: #338b4a; }
+.dot.offline { background: #be584b; }
+.boton-secundario { background: #f7f7f7; border: 1px solid #ccc; color: #303030; padding: 7px 10px; border-radius: 4px; cursor: pointer; }
+.boton-secundario:hover { background: #ededed; }
+.ayuda { margin-bottom: 12px; }
+.lista-preguntas { max-height: 178px; overflow-y: auto; border: 1px solid #dedede; padding: 7px; background: #fafafa; }
+.example-btn { display: block; width: 100%; text-align: left; padding: 7px 8px; background: white; border: 0; border-bottom: 1px solid #e5e5e5; cursor: pointer; color: #222; font-size: 14px; }
+.example-btn:hover, .example-btn:focus-visible { background: #edf4ec; }
+.example-btn:last-child { border-bottom: 0; }
+.titulo-chat { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px; }
+.titulo-chat h2 { margin: 0; }
+.chat { min-height: 220px; max-height: 420px; overflow-y: auto; background: #fcfcfc; border: 1px solid #ddd; padding: 14px; }
+.welcome { font-size: 14px; color: #777; margin: 0; }
+.turn { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e7e7e7; }
+.turn:last-child { border-bottom: 0; margin-bottom: 0; }
+.user-text { font-weight: 600; margin-bottom: 10px; overflow-wrap: anywhere; }
+.results { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
+.answer { border: 1px solid #d0d0d0; padding: 10px 12px; background: #f5f5f5; border-radius: 4px; min-width: 0; }
+.answer.error { border-color: #d1a5a5; background: #fcf2f2; }
+.tag { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13px; }
+.answer p { margin: 0; font-size: 14px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.formulario { display: flex; gap: 8px; margin-top: 12px; }
+.formulario input { flex: 1; min-width: 0; border: 1px solid #bbb; border-radius: 4px; padding: 10px; }
+.formulario button { border: 1px solid #317942; background: #35874b; color: #fff; font-weight: 600; padding: 8px 18px; border-radius: 4px; cursor: pointer; }
+.formulario button:hover { background: #276b38; }
+.formulario button:disabled { opacity: .5; cursor: wait; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 530px) { .pagina { margin-top: 18px; padding-inline: 10px; } .controles, .sugerencias, .conversacion { padding: 12px; } h1 { font-size: 26px; } .titulo-chat { align-items: flex-start; } .formulario { flex-direction: column; } .formulario button { align-self: flex-end; } }
