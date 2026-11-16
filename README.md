@@ -1,4 +1,4 @@
-# GimnasIA
+# chatbot
 
 Chatbot de ejercicios de gimnasio con dos versiones: Prolog y Gemini.
 
