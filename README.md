@@ -5,9 +5,9 @@ Chatbot de ejercicios de gimnasio con dos versiones: Prolog y Gemini.
 ## Requisitos
 
 - Python y SWI-Prolog instalados.
-- Una API Key de Google Gemini y conexión a internet para usar el LLM.
+- Una API Key de Google Gemini.
 
-## Cómo ejecutar la página (Windows)
+## Cómo ejecutar la página
 
 1. Abre la carpeta del proyecto en Visual Studio Code.
 2. En la terminal, ejecuta:
@@ -28,4 +28,3 @@ python -m venv .venv
 
 En la página puedes elegir **Prolog**, **Gemini** o **comparar ambos**.
 
-**Nota:** No incluyas el archivo `.env` al entregar o subir el proyecto.
