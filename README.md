@@ -17,7 +17,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-3. Copia `.env.example` como `.env` y coloca tu API Key en `GEMINI_API_KEY`.
+3. en el archivo .env` coloca tu API Key en `GEMINI_API_KEY`.
 4. Inicia la página con:
 
 ```powershell
